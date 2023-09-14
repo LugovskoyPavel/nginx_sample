@@ -93,9 +93,9 @@ jobs:
         env:
           CR_REGISTRY: crp52u9gli262gfbvk5r
           CR_REPOSITORY: my-registry
-          IMAGE_TAG: v1.0.1
+          IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
-          docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
+          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:v1.0.1
+          docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:v1.0.1
           
      
