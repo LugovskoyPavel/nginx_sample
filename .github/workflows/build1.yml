@@ -95,7 +95,7 @@ jobs:
           CR_REPOSITORY: my-registry
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker pull ghcr.io/lugovskoypavel/nginx_sample:main
+          docker pull ghcr.io/lugovskoypavel/nginx_sample:main -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
           docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
           
      
